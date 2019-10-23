@@ -1,6 +1,14 @@
 from django.test import TestCase
 from django.contrib.auth import get_user_model
 
+from core import models
+
+
+def sample_user(email="restaurant1@gmail.com", password="restaurant1",
+                      is_restaurant=False, is_employee=False):
+    """Create sample user"""
+    return get_user_model().objects.create_user(email, password, is_restaurant, is_employee)
+
 
 class ModelTests(TestCase):
 

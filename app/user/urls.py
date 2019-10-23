@@ -6,7 +6,12 @@ from user import views
 app_name = "user"
 
 urlpatterns = [
-    path("create/", views.CreateUserView.as_view(), name="create"),
+    path("createemployee/", views.CreateEmployeeView.as_view(),
+         name="createemployee"),
     path("token/", views.CreateTokenView.as_view(), name="token"),
-    path("me/", views.ManageUserView.as_view(), name="me"),
+    path("employee/", views.ManageEmployeeView.as_view(), name="employee"),
+    path("createrestaurant/", views.CreateRestaurantView.as_view(),
+         name="createrestaurant"),
+    path("restaurant/", views.ManageRestaurantView.as_view(),
+         name="restaurant"),
 ]
